@@ -30,7 +30,7 @@ function Form({ handleForm, onCreate }) {
       "post",
       "http://127.0.0.1:5000/api/v1/courses",
       "Course Successfully Created",
-      { ...formData },
+        { ...formData },
       { Authorization: `Bearer ${token}` },
       () => {
         onCreate(formData);

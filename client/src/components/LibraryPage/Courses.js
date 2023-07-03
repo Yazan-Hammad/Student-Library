@@ -15,7 +15,7 @@ const sortFunction = (a, b, sortBy) => {
 
 function Courses({ courses, setCourses, sortBy }) {
   useEffect(() => {
-    fetch("/api/v1/courses")
+    fetch("http://127.0.0.1:5000/api/v1/courses")
       .then((res) => res.json())
       .then((data) => setCourses(data.data.courses));
   }, []);

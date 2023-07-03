@@ -7,6 +7,7 @@ import SignupPage from "./pages/SignupPage";
 import LoginPage from "./pages/LoginPage";
 import Header from "./pages/Header";
 import LibraryPage from "./pages/LibraryPage";
+import Profile from "./pages/Profile";
 
 function App() {
   const [token, setToken] = useState("");
@@ -24,7 +25,11 @@ function App() {
       </Router>
       <Router path="/">
         <Header />
-        <LibraryPage token={token}></LibraryPage>
+        <LibraryPage></LibraryPage>
+      </Router>
+      <Router path="/profile">
+        <Header />
+        <Profile/>
       </Router>
     </BackendProvider>
   );

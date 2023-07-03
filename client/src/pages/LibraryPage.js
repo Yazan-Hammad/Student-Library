@@ -7,6 +7,7 @@ import useBackend from "../hooks/use-backend";
 
 function LibraryPage() {
   const [sortBy, setSortBy] = useState("name");
+  
   const handleSort = (attribute) => {
     setSortBy(attribute);
   };
@@ -14,8 +15,8 @@ function LibraryPage() {
   const { token, notifyError } = useBackend();
 
   const [isOpen, setOpen] = useState(false);
+  
   const handleForm = (setValue) => {
-
     if(!token) {
       notifyError('Please Login');
     } else {
